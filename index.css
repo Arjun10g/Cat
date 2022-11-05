@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    padding-top: 30px;
+}
+
+.anim1 svg{
+    transform: scale(1.5);
+}
+
+.anim1 svg path:nth-child(1){
+    stroke-dasharray: 235px;
+    stroke-dashoffset: 235px;
+    animation: dash 4s linear 0s 1 forwards, dash2 1s linear 4s 1 forwards;
+}
+
+
+.anim1 svg path:nth-child(2){
+    stroke-dasharray: 287px;
+    stroke-dashoffset: 287px;
+    animation: dash 4s linear 4s 1 forwards, dash2 1s linear 9s 1 forwards;
+}
+
+/* keyframe */
+@keyframes dash{
+    0%{
+        stroke-dashoffset: 235px;
+    }
+    100%{
+        stroke-dashoffset: 0px;
+    }
+}
+
+/* keyframe */
+@keyframes dash2{
+    100%{
+        fill: red;
+    }
+}
+
+.cont2{
+    display: flex;
+    justify-content: center;
+    translate: 0 200px;
+}
